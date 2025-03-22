@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      @media (min-width:800px) {
+      /* grid styles ------------------------------------ */
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .info1 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .info2 {
+        grid-column: span 2;
+      }
+
+      .figure1 {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+      .figure6 {
+        grid-column: span 2;
+      }
+      .figure7 {
+        grid-column: span 3;
+      }
+    }
+      /* flex styles -------------------------------------- */
+      .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      /* generic styles ----------------------------------- */
+      body {
+        max-width: 1600px;
+        margin: 0 auto;
+        font-family: "Raleway", sans-serif;
+      }
+
+      header {
+        padding: 10px;
+      }
+
+      .logo-img {
+        margin-right: 10px;
+        height: 60px;
+        transform: scaleX(-1);
+      }
+
+      .logo-text {
+        font-family: "Lobster", cursive;
+        font-size: 2.6em;
+        color: #c3bab9;
+        text-shadow: -1px -1px 0 #615655, 1px -1px 0 #615655, -1px 1px 0 #615655,
+          1px 1px 0 #615655;
+      }
+
+      .figure-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .info1,
+      .info2 {
+        padding: 40px;
+        background-color: #333;
+        color: white;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+      .info-link {
+        text-decoration: none;
+        color: #ff9900;
+      }
+    </style>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" alt="our company" class="logo">
+        <h1 class="logo-text">Our Company</h1>
+      </a>
+    </header>
+    <main class="main">
+      <section class="info1">
+        <h2>The Title</h2>
+        <p>
+          Some Text goes here, some text goes here, some text goes here, some
+          text goes here.
+        </p>
+        <a href="#" class="info-link">Learn more...</a>
+      </section>
+      <figure class="figure1">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-amir-1183434.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure2">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-catscoming-1543793.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure3">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-ezz7-691583.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure4">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-ihsanaditya-1056251.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure5">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-kirsten-buhne-682055-1521306.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure6">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-kmerriman-20787.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <section class="info2">
+        <h2>The Title</h2>
+        <p>
+          Some Text goes here, some text goes here, some text goes here, some
+          text goes here.
+        </p>
+        <a href="#" class="info-link">Learn more...</a>
+      </section>
+      <figure class="figure7">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-pixabay-45201.jpg"
+          alt="a kitten"
+        />
+      </figure>
+      <figure class="figure7">
+        <img
+          class="figure-img"
+          src="assets/imagens/pexels-vatius-127028.jpg"
+          alt="a kitten"
+        />
+      </figure>
+    </main>
+    <aside class="sidebar"></aside>
+    <footer class="footer"></footer>
+  </body>
+</html>

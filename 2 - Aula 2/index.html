@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr)
+        }
+        .gallery__header {
+            grid-column: span 6;
+        }
+        .gallery__text--1 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .gallery__text--2 {
+            grid-column: span 2;
+        }
+        .gallery__img--1 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        .gallery__img--6 {
+            grid-column: span 2;
+        }
+        .gallery__img--7 {
+            grid-column: span 3;
+        }
+        .gallery__img--8 {
+            grid-column: span 3;
+        }
+
+
+
+
+
+        .gallery > div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery__header">HEADER</div>
+        <div class="gallery__text gallery__text--1">TEXTO 1</div>
+        <div class="gallery__img gallery__img--1">IMG 1</div>
+        <div class="gallery__img gallery__img--2">IMG 2</div>
+        <div class="gallery__img gallery__img--3">IMG 3</div>
+        <div class="gallery__img gallery__img--4">IMG 4</div>
+        <div class="gallery__img gallery__img--5">IMG 5</div>
+        <div class="gallery__img gallery__img--6">IMG 6</div>
+        <div class="gallery__text gallery__text--2">TEXTO 2</div>
+        <div class="gallery__img gallery__img--7">IMG 7</div>
+        <div class="gallery__img gallery__img--8">IMG 8</div>
+    </div>
+</body>
+</html>

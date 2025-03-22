@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatos</title>
+    <style>
+        /* Configuração do container principal */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 80px auto auto auto 300px;
+            gap: 5px;
+        }
+
+        .gallery__header {
+            grid-column: span 6;
+        }
+        .gallery__text--1 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .gallery__text--2 { 
+            grid-column: span 2;
+        }
+        .gallery__img--1 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        .gallery__img--6 {
+            grid-column: span 2;
+        }
+        .gallery__img--7 {
+            grid-column: span 3;
+        }
+        .gallery__img--8 {
+            grid-column: span 3;
+        }  
+
+        body {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .gallery__img--1 {background: url(assets/imagens/pexels-amir-1183434.jpg) no-repeat center center/cover;}
+        .gallery__img--2 {background: url(assets/imagens/pexels-catscoming-1543793.jpg) no-repeat center center/cover;}
+        .gallery__img--3 {background: url(assets/imagens/pexels-ezz7-691583.jpg) no-repeat center center/cover;}
+        .gallery__img--4 {background: url(assets/imagens/pexels-ihsanaditya-1056251.jpg) no-repeat center center/cover;}
+        .gallery__img--5 {background: url(assets/imagens/pexels-kirsten-buhne-682055-1521306.jpg) no-repeat center center/cover;}
+        .gallery__img--6 {background: url(assets/imagens/pexels-kmerriman-20787.jpg) no-repeat center center/cover;}
+        .gallery__img--7 {background: url(assets/imagens/pexels-pixabay-45201.jpg) no-repeat center center/cover;}
+        .gallery__img--8 {background: url(assets/imagens/pexels-vatius-127028.jpg) no-repeat center center/cover;}
+
+        /* Estilos para elementos do bloco gallery */
+        .gallery__header {
+            background-color: #333;
+            color: #ddd8d7;
+            font-size: 30px;
+            padding-left: 20px;
+            line-height: 80px;
+        }
+        .gallery__text {
+            background-color: #333;
+            padding: 20px;
+            color: #ddd8d7;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        /* Estilos para os Links */
+        .gallery__link {
+            text-decoration: none;
+            color: orange;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 5px;
+            }
+            .gallery__img {
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <header class="gallery__header">Galeria de Gatos</header>
+        <div class="gallery__text gallery__text--1">
+            <h2>The Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum qui quis obcaecati libero. Ad molestiae similique, dignissimos praesentium fuga nisi corporis excepturi quisquam fugiat. Molestiae, temporibus perspiciatis! Unde, minima accusamus?</p>
+            <a class="gallery__link" href="#">Learn more...</a>
+        </div>
+        <div class="gallery__img gallery__img--1"></div>
+        <div class="gallery__img gallery__img--2"></div>
+        <div class="gallery__img gallery__img--3"></div>
+        <div class="gallery__img gallery__img--4"></div>
+        <div class="gallery__img gallery__img--5"></div>
+        <div class="gallery__img gallery__img--6"></div>
+        <div class="gallery__text gallery__text--2">
+            <h2>The Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum qui quis obcaecati libero. Ad molestiae similique, dignissimos praesentium fuga nisi corporis excepturi quisquam fugiat. Molestiae, temporibus perspiciatis! Unde, minima accusamus?</p>
+            <a class="gallery__link" href="#">Learn more...</a>
+        </div>
+        <div class="gallery__img gallery__img--7">oi</div>
+        <div class="gallery__img gallery__img--8"></div>
+    </div>
+</body>
+</html>
