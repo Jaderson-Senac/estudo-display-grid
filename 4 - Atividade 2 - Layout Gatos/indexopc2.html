@@ -5,51 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gatos</title>
     <style>
-        /* Configuração do container principal */
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 80px auto auto auto 300px;
-            gap: 5px;
-        }
+        @media (min-width:800px) {
+            /* Configuração do container principal */
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 80px auto auto auto 300px;
+                /* grid-template-rows: 80px auto auto auto auto; */ /* opç2 */
+                gap: 5px;
+            }
 
-        .gallery__header {
-            grid-column: span 6;
+            .gallery__header {
+                grid-column: span 6;
+            }
+            .gallery__text--primary {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .gallery__text--secondary { 
+                grid-column: span 2;
+            }
+
+            .gallery__img--1 {
+                grid-column: span 3;
+                grid-row: span 2;
+            }
+            .gallery__img--6 {
+                grid-column: span 2;
+            }
+            .gallery__img--7 {
+                grid-column: span 3;
+            }
+            .gallery__img--8 {
+                grid-column: span 3;
+            }  
         }
-        .gallery__text--1 {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-        .gallery__text--2 { 
-            grid-column: span 2;
-        }
-        .gallery__img--1 {
-            grid-column: span 3;
-            grid-row: span 2;
-        }
-        .gallery__img--6 {
-            grid-column: span 2;
-        }
-        .gallery__img--7 {
-            grid-column: span 3;
-        }
-        .gallery__img--8 {
-            grid-column: span 3;
-        }  
 
         body {
             max-width: 1600px;
             margin: 0 auto;
         }
 
-        .gallery__img--1 {background: url(assets/imagens/pexels-amir-1183434.jpg) no-repeat center center/cover;}
-        .gallery__img--2 {background: url(assets/imagens/pexels-catscoming-1543793.jpg) no-repeat center center/cover;}
-        .gallery__img--3 {background: url(assets/imagens/pexels-ezz7-691583.jpg) no-repeat center center/cover;}
-        .gallery__img--4 {background: url(assets/imagens/pexels-ihsanaditya-1056251.jpg) no-repeat center center/cover;}
-        .gallery__img--5 {background: url(assets/imagens/pexels-kirsten-buhne-682055-1521306.jpg) no-repeat center center/cover;}
-        .gallery__img--6 {background: url(assets/imagens/pexels-kmerriman-20787.jpg) no-repeat center center/cover;}
-        .gallery__img--7 {background: url(assets/imagens/pexels-pixabay-45201.jpg) no-repeat center center/cover;}
-        .gallery__img--8 {background: url(assets/imagens/pexels-vatius-127028.jpg) no-repeat center center/cover;}
+        /* Inserindo as imagens */
+        .gallery__img--1 {background: url(assets/imagens/pexels-amir-1183434.jpg);                  /* aspect-ratio: 2/1; */}/* op2 remove o comentário do aspect */
+        .gallery__img--2 {background: url(assets/imagens/pexels-catscoming-1543793.jpg);            /* aspect-ratio: 2/1; */}
+        .gallery__img--3 {background: url(assets/imagens/pexels-ezz7-691583.jpg);                   /* aspect-ratio: 1/2; */}
+        .gallery__img--4 {background: url(assets/imagens/pexels-ihsanaditya-1056251.jpg);           /* aspect-ratio: 1/2; */}
+        .gallery__img--5 {background: url(assets/imagens/pexels-kirsten-buhne-682055-1521306.jpg);  /* aspect-ratio: 1/2; */}
+        .gallery__img--6 {background: url(assets/imagens/pexels-kmerriman-20787.jpg);               /* aspect-ratio: 2/1; */}
+        .gallery__img--7 {background: url(assets/imagens/pexels-pixabay-45201.jpg);                 /* aspect-ratio: 2/1; */}
+        .gallery__img--8 {background: url(assets/imagens/pexels-vatius-127028.jpg);                 /* aspect-ratio: 2/1; */}
+
+        .gallery__img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
 
         /* Estilos para elementos do bloco gallery */
         .gallery__header {
@@ -75,20 +88,19 @@
         @media (max-width: 800px) {
             .gallery {
                 display: grid;
-                grid-template-columns: auto;
                 gap: 5px;
             }
-            .gallery__img {
+            .gallery__img { /* op2 - comenta essa parte */
                 height: 300px;
             }
         }
-
     </style>
 </head>
 <body>
     <div class="gallery">
+        <audio autoplay loop preload="auto" src="assets/audio/Meow Meow Meow Meow 🎶 Sad TikTok Song 💔😿.mp3"></audio>
         <header class="gallery__header">Galeria de Gatos</header>
-        <div class="gallery__text gallery__text--1">
+        <div class="gallery__text gallery__text--primary">
             <h2>The Title</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum qui quis obcaecati libero. Ad molestiae similique, dignissimos praesentium fuga nisi corporis excepturi quisquam fugiat. Molestiae, temporibus perspiciatis! Unde, minima accusamus?</p>
             <a class="gallery__link" href="#">Learn more...</a>
@@ -99,12 +111,12 @@
         <div class="gallery__img gallery__img--4"></div>
         <div class="gallery__img gallery__img--5"></div>
         <div class="gallery__img gallery__img--6"></div>
-        <div class="gallery__text gallery__text--2">
+        <div class="gallery__text gallery__text--secondary">
             <h2>The Title</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum qui quis obcaecati libero. Ad molestiae similique, dignissimos praesentium fuga nisi corporis excepturi quisquam fugiat. Molestiae, temporibus perspiciatis! Unde, minima accusamus?</p>
             <a class="gallery__link" href="#">Learn more...</a>
         </div>
-        <div class="gallery__img gallery__img--7">oi</div>
+        <div class="gallery__img gallery__img--7"></div>
         <div class="gallery__img gallery__img--8"></div>
     </div>
 </body>
